@@ -7,6 +7,10 @@ app = Flask(__name__)
 def index():
     return render_template('login.html')
 
+@app.route('/callback')
+def callback():
+    return 'callback'
+
 if __name__ == '__main__':
     app.debug = True
     app.run()
